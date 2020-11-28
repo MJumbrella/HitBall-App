@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hitball">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HitBall">
+        <!-- 首页 -->
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 玩家设置页 -->
+        <activity android:name=".Playerinfo" />
+        <!-- 游戏页 -->
+        <activity android:name=".Main_Game_Board" />
+        <!-- 结束页 -->
+        <activity android:name=".ResultActivity"/>
+
+    </application>
+
+</manifest>

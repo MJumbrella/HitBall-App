@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main_Game_Board">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/board_tv_player1"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/player1_shape"
+            android:gravity="center"
+            android:text="player1"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/board_tv_health1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/board_tv_player1"
+            android:layout_alignLeft="@id/board_tv_player1"
+            android:text="Health:" />
+
+        <TextView
+            android:id="@+id/board_tv_player2"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/player2_shape"
+            android:gravity="center"
+            android:text="player2"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/board_tv_health2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/board_tv_player1"
+            android:layout_alignLeft="@id/board_tv_player2"
+            android:text="Health:" />
+
+        <TextView
+            android:id="@+id/board_tv_ball"
+            android:layout_width="122dp"
+            android:layout_height="122dp"
+            android:text="ball"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ball_shape" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/board_tv_ball"
+            android:layout_alignLeft="@id/board_tv_ball"
+            android:text="Health:" />
+
+
+        <TextView
+            android:id="@+id/board_tv_player3"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_above="@id/board_tv_health3"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/player3_shape"
+            android:gravity="center"
+            android:text="player3"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/board_tv_health3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/board_tv_player3"
+            android:layout_alignParentBottom="true"
+            android:text="Health:" />
+
+        <TextView
+            android:id="@+id/board_tv_player4"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_above="@id/board_tv_health4"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/player4_shape"
+            android:gravity="center"
+            android:text="player4"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/board_tv_health4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/board_tv_player4"
+            android:layout_alignParentBottom="true"
+            android:text="Health:" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/board_your_turn"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="attack left"
+                android:textColor="@color/white" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="attack right"
+                android:textColor="@color/white" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="attack ball"
+                android:textColor="@color/white" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="health"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/board_your_turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="onBackClick"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="Your turn"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

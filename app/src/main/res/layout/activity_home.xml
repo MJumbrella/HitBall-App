@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <Button
+        android:id="@+id/TItle"
+        android:layout_width="270dp"
+        android:layout_height="114dp"
+        android:text="Hit the ball!"
+        android:textSize="30sp"
+        app:backgroundTint="#9C27B0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <Button
+        android:id="@+id/Tutorial"
+        android:layout_width="193dp"
+        android:layout_height="48dp"
+        android:text="How to play?"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TItle"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <Button
+        android:id="@+id/Start"
+        android:layout_width="187dp"
+        android:layout_height="67dp"
+        android:text="Start!"
+        android:textSize="18sp"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tutorial" />
+</androidx.constraintlayout.widget.ConstraintLayout>
