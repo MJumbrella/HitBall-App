@@ -28,18 +28,18 @@
         android:paddingHorizontal="30dp">
 
         <TextView
+            android:id="@+id/winner1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
-            android:text="Player ?"
             android:textColor="@color/black"
             android:textSize="22sp" />
 
         <TextView
+            android:id="@+id/winner2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
-            android:text="Player ?"
             android:textColor="@color/black"
             android:textSize="22sp" />
 
