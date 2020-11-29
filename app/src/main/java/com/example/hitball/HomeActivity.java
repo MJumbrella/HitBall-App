@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
     AnimationDrawable startAnimation;
-
+    MediaPlayer player;
 
 
 
@@ -23,9 +23,9 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-       // MediaPlayer player= MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
-        //player.setLooping(true);
-        //player.start();
+        player= MediaPlayer.create(HomeActivity.this, R.raw.silence);
+        player.setLooping(true);
+        player.start();
 
 
         ImageButton start = (ImageButton) findViewById(R.id.Start); // initilization: get the start button
@@ -36,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent next = new Intent(HomeActivity.this,Playerinfo.class); //set intent for going to playerinfo class
                 startActivity(next); // click to continue to the next activity
+                player.pause();
             }
         });
 
