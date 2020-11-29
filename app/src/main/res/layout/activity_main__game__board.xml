@@ -21,16 +21,14 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/player1_shape"
             android:gravity="center"
-            android:text="player1"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/board_tv_health1"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/board_tv_player1"
-            android:layout_alignLeft="@id/board_tv_player1"
-            android:text="Health:" />
+            android:layout_alignLeft="@id/board_tv_player1" />
 
         <TextView
             android:id="@+id/board_tv_player2"
@@ -41,72 +39,71 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/player2_shape"
             android:gravity="center"
-            android:text="player2"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/board_tv_health2"
-            android:layout_width="wrap_content"
+            android:layout_width="108dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/board_tv_player1"
-            android:layout_alignLeft="@id/board_tv_player2"
-            android:text="Health:" />
+            android:layout_alignLeft="@id/board_tv_player2" />
 
         <TextView
             android:id="@+id/board_tv_ball"
             android:layout_width="122dp"
             android:layout_height="122dp"
-            android:text="ball"
-            android:gravity="center"
             android:layout_centerInParent="true"
-            android:background="@drawable/ball_shape" />
+            android:background="@drawable/ball_shape"
+            android:gravity="center"
+            android:text="BALL" />
+
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/ballhealth"
+            android:layout_width="131dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/board_tv_ball"
             android:layout_alignLeft="@id/board_tv_ball"
-            android:text="Health:" />
-
-
-        <TextView
-            android:id="@+id/board_tv_player3"
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:layout_above="@id/board_tv_health3"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/player3_shape"
-            android:gravity="center"
-            android:text="player3"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/board_tv_health3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/board_tv_player3"
-            android:layout_alignParentBottom="true"
-            android:text="Health:" />
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="0dp" />
 
         <TextView
             android:id="@+id/board_tv_player4"
             android:layout_width="88dp"
             android:layout_height="88dp"
             android:layout_above="@id/board_tv_health4"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/player4_shape"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/player3_shape"
             android:gravity="center"
-            android:text="player4"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/board_tv_health4"
-            android:layout_width="wrap_content"
+            android:layout_width="156dp"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/board_tv_player4"
             android:layout_alignParentBottom="true"
-            android:text="Health:" />
+            android:layout_marginBottom="3dp" />
+
+        <TextView
+            android:id="@+id/board_tv_player3"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_above="@id/board_tv_health3"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/player4_shape"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/board_tv_health3"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/board_tv_player3"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="1dp" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -123,39 +120,43 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/al"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_selector"
-                android:text="attack left"
+                android:text="Attack Left"
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/ar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_selector"
-                android:text="attack right"
+                android:text="Attack Right"
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/ab"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_selector"
-                android:text="attack ball"
+                android:text="Attack Ball"
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/he"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_selector"
-                android:text="health"
+                android:text="Heal"
                 android:textColor="@color/white" />
 
 
@@ -169,11 +170,10 @@
             android:layout_alignParentBottom="true"
             android:layout_marginHorizontal="50dp"
             android:layout_marginBottom="20dp"
-            android:onClick="onBackClick"
             android:background="@drawable/button_selector"
             android:gravity="center"
             android:paddingVertical="10dp"
-            android:text="Your turn"
+            android:text="Your Turn!"
             android:textColor="@color/white" />
 
 
