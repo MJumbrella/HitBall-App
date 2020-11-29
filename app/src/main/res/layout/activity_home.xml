@@ -2,19 +2,24 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bb"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bb"
     tools:context=".HomeActivity">
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="316dp"
-        android:layout_height="529dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginBottom="54dp"
         android:contentDescription="@The mian  game icon"
+        app:layout_constraintBottom_toTopOf="@+id/Start"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hitball" />
@@ -22,27 +27,29 @@
     <ImageButton
         android:id="@+id/Tutorial"
         android:layout_width="59dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="136dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="335dp"
+        android:layout_marginBottom="187dp"
         android:background="@null"
         android:contentDescription="@tutorial"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/Start"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/question" />
 
     <ImageButton
         android:id="@+id/Start"
-        android:layout_width="163dp"
-        android:layout_height="166dp"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="67dp"
         android:background="@null"
         android:contentDescription="@startgame"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/start" />
+        app:layout_constraintTop_toBottomOf="@+id/Tutorial" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
