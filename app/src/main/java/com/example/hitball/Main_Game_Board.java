@@ -4,13 +4,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 //this is a message to show that wenting has pushed
 
+
 public class Main_Game_Board extends AppCompatActivity {
+    private int i = 100;
+    private int i2 = 100;
+    private int i3 = 100;
+    private int iball = 100;
+    private int i4 = 100; //set the counter for the player's health bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,19 @@ public class Main_Game_Board extends AppCompatActivity {
         TextView p3hp = (TextView) findViewById(R.id.board_tv_health3);
         TextView p4hp = (TextView) findViewById(R.id.board_tv_health4);
         TextView balhp = (TextView) findViewById(R.id.ballhealth);
+
+
+       ProgressBar pgsBar = (ProgressBar) findViewById(R.id.progressBar1); //intialize the health bar;
+        pgsBar.setProgress(100);
+        ProgressBar pgsBar2 = (ProgressBar) findViewById(R.id.progressBar2); //intialize the health bar;
+        pgsBar.setProgress(100);
+        ProgressBar pgsBar3 = (ProgressBar) findViewById(R.id.progressBar3); //intialize the health bar;
+        pgsBar.setProgress(100);
+        ProgressBar pgsBar4 = (ProgressBar) findViewById(R.id.progressBar4); //intialize the health bar;
+        pgsBar.setProgress(100);
+        ProgressBar pgsBarball = (ProgressBar) findViewById(R.id.progressBar5); //intialize the health bar;
+        pgsBar.setProgress(100);
+
 
         String name1 = ""; //initialize names in string (default)
         String name2 = "";
@@ -116,10 +136,31 @@ public class Main_Game_Board extends AppCompatActivity {
                     finish();//end
                 }
                 p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                i = p1.gethp();
+                i = (100/5)* i;
+                pgsBar.setProgress(i);
+
                 p2hp.setText(hp+Integer.toString(p2.gethp()));
+
+                i2 = p2.gethp();
+                i2 = (100/5)* i2;
+                pgsBar2.setProgress(i2); //set the progress bar
+
                 p3hp.setText(hp+Integer.toString(p3.gethp()));
+                i2 = p3.gethp();
+                i2 = (100/5)* i2;
+                pgsBar3.setProgress(i2); //set the progress bar
+
                 p4hp.setText(hp+Integer.toString(p4.gethp()));
+                i2 = p4.gethp();
+                i2 = (100/5)* i2;
+                pgsBar4.setProgress(i2); //set the progress bar
+
                 balhp.setText(hp +Integer.toString(centerball.gethp()));
+                i2 = centerball.gethp();
+                i2 = (100/7)* i2;
+                pgsBarball.setProgress(i2); //set the progress bar
+
                 counter[0] += 1;
                 String newplayername = names[counter[0] %4]; // get next turn's player name
                 String round = "Your Turn: "+ newplayername; // change the round with the new player name
@@ -158,10 +199,30 @@ public class Main_Game_Board extends AppCompatActivity {
                     finish();//end
                 }
                 p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                i = p1.gethp();
+                i = (100/5)* i;
+                pgsBar.setProgress(i);
+
                 p2hp.setText(hp+Integer.toString(p2.gethp()));
+
+                i2 = p2.gethp();
+                i2 = (100/5)* i2;
+                pgsBar2.setProgress(i2); //set the progress bar
+
                 p3hp.setText(hp+Integer.toString(p3.gethp()));
+                i2 = p3.gethp();
+                i2 = (100/5)* i2;
+                pgsBar3.setProgress(i2); //set the progress bar
+
                 p4hp.setText(hp+Integer.toString(p4.gethp()));
+                i2 = p4.gethp();
+                i2 = (100/5)* i2;
+                pgsBar4.setProgress(i2); //set the progress bar
+
                 balhp.setText(hp +Integer.toString(centerball.gethp()));
+                i2 = centerball.gethp();
+                i2 = (100/7)* i2;
+                pgsBarball.setProgress(i2); //set the progress bar
                 counter[0] += 1;
                 String newplayername = names[counter[0] %4]; // get next turn's player name
                 String round = "Your Turn: "+ newplayername; // change the round with the new player name
@@ -214,10 +275,30 @@ public class Main_Game_Board extends AppCompatActivity {
                     }
                 }
                 p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                i = p1.gethp();
+                i = (100/5)* i;
+                pgsBar.setProgress(i);
+
                 p2hp.setText(hp+Integer.toString(p2.gethp()));
+
+                i2 = p2.gethp();
+                i2 = (100/5)* i2;
+                pgsBar2.setProgress(i2); //set the progress bar
+
                 p3hp.setText(hp+Integer.toString(p3.gethp()));
+                i2 = p3.gethp();
+                i2 = (100/5)* i2;
+                pgsBar3.setProgress(i2); //set the progress bar
+
                 p4hp.setText(hp+Integer.toString(p4.gethp()));
+                i2 = p4.gethp();
+                i2 = (100/5)* i2;
+                pgsBar4.setProgress(i2); //set the progress bar
+
                 balhp.setText(hp +Integer.toString(centerball.gethp()));
+                i2 = centerball.gethp();
+                i2 = (100/7)* i2;
+                pgsBarball.setProgress(i2); //set the progress bar
                 counter[0] += 1;
                 String newplayername = names[counter[0] %4]; // get next turn's player name
                 String round = "Your Turn: "+ newplayername; // change the round with the new player name
@@ -242,10 +323,30 @@ public class Main_Game_Board extends AppCompatActivity {
                     p2.cure();
                 }
                 p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                i = p1.gethp();
+                i = (100/5)* i;
+                pgsBar.setProgress(i);
+
                 p2hp.setText(hp+Integer.toString(p2.gethp()));
+
+                i2 = p2.gethp();
+                i2 = (100/5)* i2;
+                pgsBar2.setProgress(i2); //set the progress bar
+
                 p3hp.setText(hp+Integer.toString(p3.gethp()));
+                i2 = p3.gethp();
+                i2 = (100/5)* i2;
+                pgsBar3.setProgress(i2); //set the progress bar
+
                 p4hp.setText(hp+Integer.toString(p4.gethp()));
+                i2 = p4.gethp();
+                i2 = (100/5)* i2;
+                pgsBar4.setProgress(i2); //set the progress bar
+
                 balhp.setText(hp +Integer.toString(centerball.gethp()));
+                i2 = centerball.gethp();
+                i2 = (100/7)* i2;
+                pgsBarball.setProgress(i2); //set the progress bar
                 counter[0] += 1;
                 String newplayername = names[counter[0] %4]; // get next turn's player name
                 String round = "Your Turn: "+ newplayername; // change the round with the new player name
