@@ -17,13 +17,22 @@ public class HomeActivity extends AppCompatActivity {
     AnimationDrawable startAnimation;
     MediaPlayer player;
 
-
+    private Button to_tutorial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        player= MediaPlayer.create(HomeActivity.this, R.raw.silence);
+
+       to_tutorial = (Button) findViewById(R.id.tutorial);
+       to_tutorial.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               opentutorial();
+           }
+       });
+
+        player = MediaPlayer.create(HomeActivity.this, R.raw.silence);
         player.setLooping(true);
         player.start();
 
@@ -40,14 +49,16 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-
-
-
     }
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         startAnimation.start();
+    }
+
+    public void opentutorial() {
+        Intent intent = new Intent(this, Tutorial.class);
+        startActivity(intent);
     }
 
 }

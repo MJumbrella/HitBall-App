@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HitBall">
+        <activity android:name=".Tutorial"></activity>
         <!-- 首页 -->
         <activity android:name=".HomeActivity">
             <intent-filter>
@@ -16,14 +17,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- playerinfo -->
-        <activity android:name=".Playerinfo" />
-        <!-- gameboard -->
-        <activity android:name=".Main_Game_Board" />
-        <!-- result -->
-        <activity android:name=".ResultActivity"/>
-
+        </activity> <!-- playerinfo -->
+        <activity android:name=".Playerinfo" /> <!-- gameboard -->
+        <activity android:name=".Main_Game_Board" /> <!-- result -->
+        <activity android:name=".ResultActivity" />
     </application>
 
 </manifest>
