@@ -24,10 +24,7 @@ public class Main_Game_Board extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__game__board);
-        TextView p1name = (TextView) findViewById(R.id.board_tv_player1); // get textview info
-        TextView p2name = (TextView) findViewById(R.id.board_tv_player2);
-        TextView p3name = (TextView) findViewById(R.id.board_tv_player3);
-        TextView p4name = (TextView) findViewById(R.id.board_tv_player4);
+
         TextView p1hp = (TextView) findViewById(R.id.board_tv_health1);
         TextView p2hp = (TextView) findViewById(R.id.board_tv_health2);
         TextView p3hp = (TextView) findViewById(R.id.board_tv_health3);
@@ -62,10 +59,7 @@ public class Main_Game_Board extends AppCompatActivity {
             name2 = reach [1];
             name3 = reach [2];
             name4 = reach [3];
-            p1name.setText(name1); // copy the name from the last activity
-            p2name.setText(name2);
-            p3name.setText(name3);
-            p4name.setText(name4);
+
         }
 
         ball centerball = new ball(ballhp); //initialize the center ball object
@@ -93,12 +87,14 @@ public class Main_Game_Board extends AppCompatActivity {
         String round = "Your Turn: "+ playername[0]; // initialize the round (first round) with the first player's name
         turn.setText(round); // display the first player's turn
 
-        String hp = "Healthpoints:"; // initialize the hp string
-        p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
-        p2hp.setText(hp+Integer.toString(p2.gethp()));
-        p3hp.setText(hp+Integer.toString(p3.gethp()));
-        p4hp.setText(hp+Integer.toString(p4.gethp()));
-        balhp.setText(hp +Integer.toString(centerball.gethp()));
+
+        String hp = "     HP:"; // initialize the hp string
+        String ballHp = "Ball HP:"; // initialize the hp string
+        p1hp.setText(p1.getname()+hp+Integer.toString(p1.gethp())); //set healthpoints texts
+        p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
+        p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
+        p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
+        balhp.setText(ballHp +Integer.toString(centerball.gethp()));
 
         String Name1 = name1;//copy names onece again for the next clicks
         String Name2 = name2;
@@ -135,28 +131,28 @@ public class Main_Game_Board extends AppCompatActivity {
                     startActivity(nexta); // click to change to the gameboard class
                     finish();//end
                 }
-                p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                p1hp.setText(p1.getname()+hp+Integer.toString(p1.gethp())); //set healthpoints texts
                 i = p1.gethp();
                 i = (100/5)* i;
                 pgsBar.setProgress(i);
 
-                p2hp.setText(hp+Integer.toString(p2.gethp()));
+                p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
 
                 i2 = p2.gethp();
                 i2 = (100/5)* i2;
                 pgsBar2.setProgress(i2); //set the progress bar
 
-                p3hp.setText(hp+Integer.toString(p3.gethp()));
+                p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
                 i2 = p3.gethp();
                 i2 = (100/5)* i2;
                 pgsBar3.setProgress(i2); //set the progress bar
 
-                p4hp.setText(hp+Integer.toString(p4.gethp()));
+                p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
                 i2 = p4.gethp();
                 i2 = (100/5)* i2;
                 pgsBar4.setProgress(i2); //set the progress bar
 
-                balhp.setText(hp +Integer.toString(centerball.gethp()));
+                balhp.setText(ballHp +Integer.toString(centerball.gethp()));
                 i2 = centerball.gethp();
                 i2 = (100/7)* i2;
                 pgsBarball.setProgress(i2); //set the progress bar
@@ -198,28 +194,28 @@ public class Main_Game_Board extends AppCompatActivity {
                     startActivity(nexta); // click to change to the gameboard class
                     finish();//end
                 }
-                p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                p1hp.setText(p1.getname()+hp+Integer.toString(p1.gethp())); //set healthpoints texts
                 i = p1.gethp();
                 i = (100/5)* i;
                 pgsBar.setProgress(i);
 
-                p2hp.setText(hp+Integer.toString(p2.gethp()));
+                p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
 
                 i2 = p2.gethp();
                 i2 = (100/5)* i2;
                 pgsBar2.setProgress(i2); //set the progress bar
 
-                p3hp.setText(hp+Integer.toString(p3.gethp()));
+                p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
                 i2 = p3.gethp();
                 i2 = (100/5)* i2;
                 pgsBar3.setProgress(i2); //set the progress bar
 
-                p4hp.setText(hp+Integer.toString(p4.gethp()));
+                p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
                 i2 = p4.gethp();
                 i2 = (100/5)* i2;
                 pgsBar4.setProgress(i2); //set the progress bar
 
-                balhp.setText(hp +Integer.toString(centerball.gethp()));
+                balhp.setText(ballHp +Integer.toString(centerball.gethp()));
                 i2 = centerball.gethp();
                 i2 = (100/7)* i2;
                 pgsBarball.setProgress(i2); //set the progress bar
@@ -293,28 +289,28 @@ public class Main_Game_Board extends AppCompatActivity {
                         finish();//end
                     }
                 }
-                p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                p1hp.setText(p1.getname()+hp+Integer.toString(p1.gethp())); //set healthpoints texts
                 i = p1.gethp();
                 i = (100/5)* i;
                 pgsBar.setProgress(i);
 
-                p2hp.setText(hp+Integer.toString(p2.gethp()));
+                p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
 
                 i2 = p2.gethp();
                 i2 = (100/5)* i2;
                 pgsBar2.setProgress(i2); //set the progress bar
 
-                p3hp.setText(hp+Integer.toString(p3.gethp()));
+                p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
                 i2 = p3.gethp();
                 i2 = (100/5)* i2;
                 pgsBar3.setProgress(i2); //set the progress bar
 
-                p4hp.setText(hp+Integer.toString(p4.gethp()));
+                p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
                 i2 = p4.gethp();
                 i2 = (100/5)* i2;
                 pgsBar4.setProgress(i2); //set the progress bar
 
-                balhp.setText(hp +Integer.toString(centerball.gethp()));
+                balhp.setText(ballHp +Integer.toString(centerball.gethp()));
                 i2 = centerball.gethp();
                 i2 = (100/7)* i2;
                 pgsBarball.setProgress(i2); //set the progress bar
@@ -341,28 +337,28 @@ public class Main_Game_Board extends AppCompatActivity {
                 else{
                     p2.cure();
                 }
-                p1hp.setText(hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                p1hp.setText(p1.getname()+hp+Integer.toString(p1.gethp())); //set healthpoints texts
                 i = p1.gethp();
                 i = (100/5)* i;
                 pgsBar.setProgress(i);
 
-                p2hp.setText(hp+Integer.toString(p2.gethp()));
+                p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
 
                 i2 = p2.gethp();
                 i2 = (100/5)* i2;
                 pgsBar2.setProgress(i2); //set the progress bar
 
-                p3hp.setText(hp+Integer.toString(p3.gethp()));
+                p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
                 i2 = p3.gethp();
                 i2 = (100/5)* i2;
                 pgsBar3.setProgress(i2); //set the progress bar
 
-                p4hp.setText(hp+Integer.toString(p4.gethp()));
+                p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
                 i2 = p4.gethp();
                 i2 = (100/5)* i2;
                 pgsBar4.setProgress(i2); //set the progress bar
 
-                balhp.setText(hp +Integer.toString(centerball.gethp()));
+                balhp.setText(ballHp +Integer.toString(centerball.gethp()));
                 i2 = centerball.gethp();
                 i2 = (100/7)* i2;
                 pgsBarball.setProgress(i2); //set the progress bar
