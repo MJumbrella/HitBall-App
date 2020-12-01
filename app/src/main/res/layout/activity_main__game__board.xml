@@ -89,11 +89,11 @@
 
         <TextView
             android:id="@+id/board_tv_health4"
-            android:layout_width="156dp"
+            android:layout_width="133dp"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/board_tv_player4"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="-10dp"
+            android:layout_marginLeft="3dp"
             android:layout_marginBottom="5dp"
             android:textColor="@color/white" />
 
@@ -195,7 +195,7 @@
             android:layout_marginTop="110dp"
             android:layout_marginEnd="-6dp"
             android:layout_marginRight="-6dp"
-            android:layout_marginBottom="88dp"
+            android:layout_marginBottom="60dp"
             android:background="@drawable/youeturn"
             android:gravity="center"
             android:paddingVertical="10dp"
@@ -205,7 +205,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="230dp"
             android:layout_marginBottom="0dp"
             android:orientation="horizontal">
 
@@ -260,15 +260,13 @@
             android:layout_alignBottom="@+id/board_your_turn"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="277dp"
-            android:layout_marginRight="277dp"
-            android:layout_marginBottom="233dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginEnd="264dp"
+            android:layout_marginRight="264dp"
+            android:layout_marginBottom="211dp"
             android:max="100"
             android:progress="79" />
 
@@ -280,15 +278,13 @@
             android:layout_alignBottom="@+id/board_your_turn"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="280dp"
-            android:layout_marginLeft="280dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginRight="17dp"
-            android:layout_marginBottom="233dp"
+            android:layout_marginStart="263dp"
+            android:layout_marginLeft="263dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginBottom="212dp"
             android:max="100"
             android:progress="79" />
 

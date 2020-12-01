@@ -38,9 +38,9 @@ public class Main_Game_Board extends AppCompatActivity {
         pgsBar.setProgress(100);
         ProgressBar pgsBar2 = (ProgressBar) findViewById(R.id.progressBar2); //intialize the health bar;
         pgsBar2.setProgress(100);
-        ProgressBar pgsBar3 = (ProgressBar) findViewById(R.id.progressBar3); //intialize the health bar;
+        ProgressBar pgsBar3 = (ProgressBar) findViewById(R.id.progressBar4); //intialize the health bar;
         pgsBar3.setProgress(100);
-        ProgressBar pgsBar4 = (ProgressBar) findViewById(R.id.progressBar4); //intialize the health bar;
+        ProgressBar pgsBar4 = (ProgressBar) findViewById(R.id.progressBar3); //intialize the health bar;
         pgsBar4.setProgress(100);
         ProgressBar pgsBarball = (ProgressBar) findViewById(R.id.progressBar5); //intialize the health bar;
         pgsBarball.setProgress(100);
