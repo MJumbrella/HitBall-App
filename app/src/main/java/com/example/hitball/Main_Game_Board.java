@@ -234,29 +234,33 @@ public class Main_Game_Board extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String playername = names[counter[0] %4]; // get this turn's player name
-                if (playername == Name1){ // heals your ally!
+                if (playername == Name1){ // attack the ball!
                     centerball.hurt();
                     if (p1.gethp()<=2){//activate the buff!
                         centerball.hurt();
                     }
+                    p1.hurt(); //Attack the ball will result in lost of HP
                 }
                 else if (playername == Name2) {
                     centerball.hurt();
                     if (p2.gethp()<=2){//activate the buff!
                         centerball.hurt();
                     }
+                    p2.hurt();
                 }
                 else if (playername == Name3) {
                     centerball.hurt();
                     if (p3.gethp()<=2){//activate the buff!
                         centerball.hurt();
                     }
+                    p3.hurt();
                 }
                 else{
                     centerball.hurt();
                     if (p4.gethp()<=2){//activate the buff!
                         centerball.hurt();
                     }
+                    p4.hurt();
                 }
                 if (centerball.gethp()<=0){//check if the ball has no hp to decide which team wins
                     if (playername == p1.getname() || playername == p3.getname()){
@@ -270,6 +274,21 @@ public class Main_Game_Board extends AppCompatActivity {
                         Intent nexta = new Intent(Main_Game_Board.this,ResultActivity.class);
                         String [] pass = {p2.getname(),p4.getname()};
                         nexta.putExtra("key",pass); // prepare to pass the array to the result activity
+                        startActivity(nexta); // click to change to the gameboard class
+                        finish();//end
+                    }
+                }
+                else if (p1.gethp()<=0 || p2.gethp()<=0 || p3.gethp()<=0 || p4.gethp()<=0) {
+                    if (p1.gethp() <= 0 || p3.gethp() <= 0) { //check if one group member dies, the other win and pass to the next activity
+                        Intent nexta = new Intent(Main_Game_Board.this, ResultActivity.class);
+                        String[] pass = {p2.getname(), p4.getname()};
+                        nexta.putExtra("key", pass); // prepare to pass the array to the result activity
+                        startActivity(nexta); // click to change to the gameboard class
+                        finish();//end
+                    } else if (p2.gethp() <= 0 || p4.gethp() <= 0) {//check if one group member dies, the other win and pass to the next activity
+                        Intent nexta = new Intent(Main_Game_Board.this, ResultActivity.class);
+                        String[] pass = {p1.getname(), p3.getname()};
+                        nexta.putExtra("key", pass); // prepare to pass the array to the result activity
                         startActivity(nexta); // click to change to the gameboard class
                         finish();//end
                     }
