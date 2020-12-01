@@ -1,6 +1,7 @@
 package com.example.hitball;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,7 +33,6 @@ public class Main_Game_Board extends AppCompatActivity {
         TextView p3hp = (TextView) findViewById(R.id.board_tv_health3);
         TextView p4hp = (TextView) findViewById(R.id.board_tv_health4);
         TextView balhp = (TextView) findViewById(R.id.ballhealth);
-
 
        ProgressBar pgsBar = (ProgressBar) findViewById(R.id.progressBar1); //intialize the health bar;
         pgsBar.setProgress(100);
