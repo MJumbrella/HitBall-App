@@ -1,7 +1,7 @@
 package com.example.hitball;
 
 import android.content.Intent;
-import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,11 +19,21 @@ public class Main_Game_Board extends AppCompatActivity {
     private int i3 = 100;
     private int iball = 100;
     private int i4 = 100; //set the counter for the player's health bar;
+    AnimationDrawable ballAnimation;
+    AnimationDrawable player1Animation;
+    AnimationDrawable player2Animation;
+    AnimationDrawable player3Animation;
+    AnimationDrawable player4Animation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__game__board);
+        TextView p1p = (TextView) findViewById(R.id.board_tv_player1);
+        TextView p2p = (TextView) findViewById(R.id.board_tv_player2);
+        TextView p3p = (TextView) findViewById(R.id.board_tv_player3);
+        TextView p4p = (TextView) findViewById(R.id.board_tv_player4);
+
 
         TextView p1hp = (TextView) findViewById(R.id.board_tv_health1);
         TextView p2hp = (TextView) findViewById(R.id.board_tv_health2);
@@ -107,15 +117,31 @@ public class Main_Game_Board extends AppCompatActivity {
                 String playername = names[counter[0] %4]; // get this turn's player name
                 if (playername == Name1){ // attack left!
                     p2.hurt();
+                    p2p.setBackgroundResource(R.drawable.player2ani);
+                    player2Animation = (AnimationDrawable) p2p.getBackground();
+                    player2Animation.stop();
+                    player2Animation.start();
                 }
                 else if (playername == Name2) {
                     p3.hurt();
+                    p3p.setBackgroundResource(R.drawable.player3ani);
+                    player3Animation = (AnimationDrawable) p3p.getBackground();
+                    player3Animation.stop();
+                    player3Animation.start();
                 }
                 else if (playername == Name3) {
                     p4.hurt();
+                    p4p.setBackgroundResource(R.drawable.player4ani);
+                    player4Animation = (AnimationDrawable) p4p.getBackground();
+                    player4Animation.stop();
+                    player4Animation.start();
                 }
                 else{
                     p1.hurt();
+                    p1p.setBackgroundResource(R.drawable.player1ani);
+                    player1Animation = (AnimationDrawable) p1p.getBackground();
+                    player1Animation.stop();
+                    player1Animation.start();
                 }
                 if (p1.gethp()<=0 || p3.gethp()<=0){ //check if one group member dies, the other win and pass to the next activity
                     Intent nexta = new Intent(Main_Game_Board.this,ResultActivity.class);
@@ -170,15 +196,31 @@ public class Main_Game_Board extends AppCompatActivity {
                 String playername = names[counter[0] %4]; // get this turn's player name
                 if (playername == Name1){ // attack right!
                     p4.hurt();
+                    p4p.setBackgroundResource(R.drawable.player4ani);
+                    player4Animation = (AnimationDrawable) p4p.getBackground();
+                    player4Animation.stop();
+                    player4Animation.start();
                 }
                 else if (playername == Name2) {
                     p1.hurt();
+                    p1p.setBackgroundResource(R.drawable.player1ani);
+                    player1Animation = (AnimationDrawable) p1p.getBackground();
+                    player1Animation.stop();
+                    player1Animation.start();
                 }
                 else if (playername == Name3) {
                     p2.hurt();
+                    p2p.setBackgroundResource(R.drawable.player2ani);
+                    player2Animation = (AnimationDrawable) p2p.getBackground();
+                    player2Animation.stop();
+                    player2Animation.start();
                 }
                 else{
                     p3.hurt();
+                    p3p.setBackgroundResource(R.drawable.player3ani);
+                    player3Animation = (AnimationDrawable) p3p.getBackground();
+                    player3Animation.stop();
+                    player3Animation.start();
                 }
                 if (p1.gethp()<=0 || p3.gethp()<=0){ //check if one group member dies, the other win and pass to the next activity
                     Intent nexta = new Intent(Main_Game_Board.this,ResultActivity.class);
@@ -225,17 +267,30 @@ public class Main_Game_Board extends AppCompatActivity {
                 turn.setText(round); // display the this player's turn
             }
         });
-
+        TextView ballpic = (TextView) findViewById(R.id.board_tv_ball);
         attackball.setOnClickListener(new View.OnClickListener() {// what happens when clik attackball
             @Override
             public void onClick(View v) {
+                ballpic.setBackgroundResource(R.drawable.ballani);
+               ballAnimation = (AnimationDrawable) ballpic.getBackground();
+               ballAnimation.stop();
+                ballAnimation.start();
+
+
+                //ballpic.setBackgroundResource(R.drawable.ball);
+
+
                 String playername = names[counter[0] %4]; // get this turn's player name
                 if (playername == Name1){ // attack the ball!
                     centerball.hurt();
                     if (p1.gethp()<=2){//activate the buff!
                         centerball.hurt();
                     }
-                    p1.hurt(); //Attack the ball will result in lost of HP
+                    p1.hurt();
+                    p1p.setBackgroundResource(R.drawable.player1ani);
+                    player1Animation = (AnimationDrawable) p1p.getBackground();
+                    player1Animation.stop();
+                    player1Animation.start();//Attack the ball will result in lost of HP
                 }
                 else if (playername == Name2) {
                     centerball.hurt();
@@ -243,6 +298,10 @@ public class Main_Game_Board extends AppCompatActivity {
                         centerball.hurt();
                     }
                     p2.hurt();
+                    p2p.setBackgroundResource(R.drawable.player2ani);
+                    player2Animation = (AnimationDrawable) p2p.getBackground();
+                    player2Animation.stop();
+                    player2Animation.start();
                 }
                 else if (playername == Name3) {
                     centerball.hurt();
@@ -250,6 +309,10 @@ public class Main_Game_Board extends AppCompatActivity {
                         centerball.hurt();
                     }
                     p3.hurt();
+                    p3p.setBackgroundResource(R.drawable.player3ani);
+                    player3Animation = (AnimationDrawable) p3p.getBackground();
+                    player3Animation.stop();
+                    player3Animation.start();
                 }
                 else{
                     centerball.hurt();
@@ -257,6 +320,10 @@ public class Main_Game_Board extends AppCompatActivity {
                         centerball.hurt();
                     }
                     p4.hurt();
+                    p4p.setBackgroundResource(R.drawable.player4ani);
+                    player4Animation = (AnimationDrawable) p4p.getBackground();
+                    player4Animation.stop();
+                    player4Animation.start();
                 }
                 if (centerball.gethp()<=0){//check if the ball has no hp to decide which team wins
                     if (playername == p1.getname() || playername == p3.getname()){
@@ -320,6 +387,7 @@ public class Main_Game_Board extends AppCompatActivity {
                 turn.setText(round); // display the this player's turn
             }
         });
+
 
         heals.setOnClickListener(new View.OnClickListener() {// what happens when clik heals
             @Override

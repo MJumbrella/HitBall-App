@@ -27,45 +27,44 @@
         app:srcCompat="@drawable/hitball" />
 
     <ImageButton
-        android:id="@+id/Tutorial"
-        android:layout_width="59dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="335dp"
-        android:layout_marginBottom="187dp"
-        android:background="@null"
-        android:contentDescription="/@tutorial"
-
-        app:layout_constraintBottom_toTopOf="@+id/Start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/question"
-        tools:ignore="VectorDrawableCompat" />
-
-    <ImageButton
         android:id="@+id/Start"
         android:layout_width="209dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="67dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
         android:background="@null"
         android:contentDescription="/@startgame"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Tutorial" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/tutorial"
-        android:layout_width="106dp"
-        android:layout_height="58dp"
+        android:layout_width="194dp"
+        android:layout_height="75dp"
         android:layout_marginTop="100dp"
+        android:background="@null"
+        android:fontFamily="sans-serif-light"
         android:text="Tutorial"
+        android:textColor="#74DAB1"
+        android:textColorHint="#74DAB1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30sp"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.684" />
+        app:layout_constraintVertical_bias="0.685" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="230dp"
+        android:layout_height="278dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ball" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
