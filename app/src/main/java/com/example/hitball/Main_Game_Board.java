@@ -3,6 +3,7 @@ package com.example.hitball;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -111,6 +112,7 @@ public class Main_Game_Board extends AppCompatActivity {
         String Name2 = name2;
         String Name3 = name3;
         String Name4 = name4;
+        Handler handler = new Handler();
 
         attackleft.setOnClickListener(new View.OnClickListener() {// what happens when clik attackleft
             @Override
@@ -187,28 +189,35 @@ public class Main_Game_Board extends AppCompatActivity {
 
                 counter[0] += 1;
                 String newplayername = names[counter[0] %4];
-                int countp = counter[0] %4;
-                if(countp == 0){
-                    p1p.setBackgroundResource(R.drawable.player1turn);
-                    p2p.setBackgroundResource(R.drawable.player2);
-                    p3p.setBackgroundResource(R.drawable.player4);
-                    p4p.setBackgroundResource(R.drawable.player3);
-                }else if(countp == 1) {
-                    p1p.setBackgroundResource(R.drawable.player1);
-                    p2p.setBackgroundResource(R.drawable.player2turn);
-                    p3p.setBackgroundResource(R.drawable.player4);
-                    p4p.setBackgroundResource(R.drawable.player3);
-                }else if(countp == 2){
-                    p1p.setBackgroundResource(R.drawable.player1);
-                    p2p.setBackgroundResource(R.drawable.player2);
-                    p3p.setBackgroundResource(R.drawable.player4turn);
-                    p4p.setBackgroundResource(R.drawable.player3);
-                }else if(countp == 3){
-                    p1p.setBackgroundResource(R.drawable.player1);
-                    p2p.setBackgroundResource(R.drawable.player2);
-                    p3p.setBackgroundResource(R.drawable.player4);
-                    p4p.setBackgroundResource(R.drawable.player3turn);
-                }// get this turn's player name and highlight// get next turn's player name
+
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        int countp = counter[0] %4;
+                        if(countp == 0){
+                            p1p.setBackgroundResource(R.drawable.player1turn);
+                            p2p.setBackgroundResource(R.drawable.player2);
+                            p3p.setBackgroundResource(R.drawable.player4);
+                            p4p.setBackgroundResource(R.drawable.player3);
+                        }else if(countp == 1) {
+                            p1p.setBackgroundResource(R.drawable.player1);
+                            p2p.setBackgroundResource(R.drawable.player2turn);
+                            p3p.setBackgroundResource(R.drawable.player4);
+                            p4p.setBackgroundResource(R.drawable.player3);
+                        }else if(countp == 2){
+                            p1p.setBackgroundResource(R.drawable.player1);
+                            p2p.setBackgroundResource(R.drawable.player2);
+                            p3p.setBackgroundResource(R.drawable.player4turn);
+                            p4p.setBackgroundResource(R.drawable.player3);
+                        }else if(countp == 3){
+                            p1p.setBackgroundResource(R.drawable.player1);
+                            p2p.setBackgroundResource(R.drawable.player2);
+                            p3p.setBackgroundResource(R.drawable.player4);
+                            p4p.setBackgroundResource(R.drawable.player3turn);
+                        }// get this turn's player name and highlight// get next turn's player name
+                    }
+                }, 1000);
+
                 String round = "Your Turn: "+ newplayername; // change the round with the new player name
                 turn.setText(round); // display the this player's turn
             }

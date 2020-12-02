@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent next = new Intent(HomeActivity.this,Playerinfo.class); //set intent for going to playerinfo class
                 startActivity(next); // click to continue to the next activity
-                player.pause();
+                //player.pause();
             }
         });
 
