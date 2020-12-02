@@ -95,6 +95,7 @@ public class Main_Game_Board extends AppCompatActivity {
 
         String[] playername = {names[counter[0] % 4]}; // get this turn's player name
         String round = "Your Turn: "+ playername[0]; // initialize the round (first round) with the first player's name
+        p1p.setBackgroundResource(R.drawable.player1turn);
         turn.setText(round); // display the first player's turn
 
 
@@ -114,7 +115,8 @@ public class Main_Game_Board extends AppCompatActivity {
         attackleft.setOnClickListener(new View.OnClickListener() {// what happens when clik attackleft
             @Override
             public void onClick(View v) {
-                String playername = names[counter[0] %4]; // get this turn's player name
+                String playername = names[counter[0] %4];
+               // get this turn's player name
                 if (playername == Name1){ // attack left!
                     p2.hurt();
                     p2p.setBackgroundResource(R.drawable.player2ani);
@@ -184,7 +186,29 @@ public class Main_Game_Board extends AppCompatActivity {
                 pgsBarball.setProgress(i2); //set the progress bar
 
                 counter[0] += 1;
-                String newplayername = names[counter[0] %4]; // get next turn's player name
+                String newplayername = names[counter[0] %4];
+                int countp = counter[0] %4;
+                if(countp == 0){
+                    p1p.setBackgroundResource(R.drawable.player1turn);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 1) {
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2turn);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 2){
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4turn);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 3){
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3turn);
+                }// get this turn's player name and highlight// get next turn's player name
                 String round = "Your Turn: "+ newplayername; // change the round with the new player name
                 turn.setText(round); // display the this player's turn
             }
@@ -193,7 +217,29 @@ public class Main_Game_Board extends AppCompatActivity {
         attackright.setOnClickListener(new View.OnClickListener() { // what happens when clik attackright
             @Override
             public void onClick(View v) {
-                String playername = names[counter[0] %4]; // get this turn's player name
+                String playername = names[counter[0] %4];
+                int countp = counter[0] %4;
+                if(countp == 3){
+                    p1p.setBackgroundResource(R.drawable.player1turn);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 0) {
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2turn);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 1){
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4turn);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 2){
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3turn);
+                }// get this turn's player name and highlight
                 if (playername == Name1){ // attack right!
                     p4.hurt();
                     p4p.setBackgroundResource(R.drawable.player4ani);
@@ -262,7 +308,8 @@ public class Main_Game_Board extends AppCompatActivity {
                 i2 = (100/7)* i2;
                 pgsBarball.setProgress(i2); //set the progress bar
                 counter[0] += 1;
-                String newplayername = names[counter[0] %4]; // get next turn's player name
+                String newplayername = names[counter[0] %4];// get next turn's player name
+
                 String round = "Your Turn: "+ newplayername; // change the round with the new player name
                 turn.setText(round); // display the this player's turn
             }
@@ -280,7 +327,29 @@ public class Main_Game_Board extends AppCompatActivity {
                 //ballpic.setBackgroundResource(R.drawable.ball);
 
 
-                String playername = names[counter[0] %4]; // get this turn's player name
+                String playername = names[counter[0] %4];
+                int countp = counter[0] %4;
+                if(countp == 3){
+                    p1p.setBackgroundResource(R.drawable.player1turn);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 0) {
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2turn);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 1){
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4turn);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 2){
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3turn);
+                }// get this turn's player name and highlight// get this turn's player name
                 if (playername == Name1){ // attack the ball!
                     centerball.hurt();
                     if (p1.gethp()<=2){//activate the buff!
@@ -392,7 +461,29 @@ public class Main_Game_Board extends AppCompatActivity {
         heals.setOnClickListener(new View.OnClickListener() {// what happens when clik heals
             @Override
             public void onClick(View v) {
-                String playername = names[counter[0] %4]; // get this turn's player name
+                String playername = names[counter[0] %4];
+                int countp = counter[0] %4;
+                if(countp == 3){
+                    p1p.setBackgroundResource(R.drawable.player1turn);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 0) {
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2turn);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 1){
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4turn);
+                    p4p.setBackgroundResource(R.drawable.player3);
+                }else if(countp == 2){
+                    p1p.setBackgroundResource(R.drawable.player1);
+                    p2p.setBackgroundResource(R.drawable.player2);
+                    p3p.setBackgroundResource(R.drawable.player4);
+                    p4p.setBackgroundResource(R.drawable.player3turn);
+                }// get this turn's player name and highlight// get this turn's player name
                 if (playername == Name1){ // heals your ally!
                     p3.cure();
                 }
