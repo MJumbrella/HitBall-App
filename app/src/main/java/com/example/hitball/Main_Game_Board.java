@@ -215,11 +215,12 @@ public class Main_Game_Board extends AppCompatActivity {
                             p3p.setBackgroundResource(R.drawable.player4);
                             p4p.setBackgroundResource(R.drawable.player3turn);
                         }// get this turn's player name and highlight// get next turn's player name
+                        String round = "Your Turn: "+ newplayername; // change the round with the new player name
+                        turn.setText(round); // display the this player's turn
                     }
                 }, 1000);
 
-                String round = "Your Turn: "+ newplayername; // change the round with the new player name
-                turn.setText(round); // display the this player's turn
+
             }
         });
 
