@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-//this is a message to show that wenting has pushed
-
 
 public class Main_Game_Board extends AppCompatActivity {
     private int i = 100;
