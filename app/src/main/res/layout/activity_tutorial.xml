@@ -21,9 +21,9 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hi! Welcome to the Hitball tutorial!"
+        android:text="@string/welcome_message"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         tools:layout_editor_absoluteX="91dp"
         tools:layout_editor_absoluteY="29dp" />
 
@@ -31,13 +31,14 @@
             <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="228dp"
-                android:layout_height="282dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/four_player"
-                tools:layout_editor_absoluteY="143dp" />
+                app:srcCompat="@drawable/screenshot_fourplayer"
+                tools:layout_editor_absoluteY="143dp"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -50,30 +51,28 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="67dp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="366dp"
-        android:layout_height="35dp"
-        android:layout_gravity="center"
-        android:text="@string/goal"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="444dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="366dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/goal" />
 
             <ImageView
             android:id="@+id/imageView2"
             android:layout_width="228dp"
             android:layout_height="316dp"
             android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/your_turn"
-            tools:layout_editor_absoluteY="143dp" />
+            app:srcCompat="@drawable/screenshot_main"
+            tools:layout_editor_absoluteY="143dp"
+                android:contentDescription="TODO" />
 
 
             <TextView
@@ -81,17 +80,14 @@
                 android:layout_width="370dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
                 android:text="@string/actions"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.551"
-                app:layout_constraintStart_toStartOf="parent"
+
                 tools:layout_editor_absoluteY="496dp" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="373dp"
-                android:layout_height="99dp"
+                android:layout_height="36dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
@@ -107,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Back"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 tools:layout_editor_absoluteX="150dp"
                 tools:layout_editor_absoluteY="667dp" />
