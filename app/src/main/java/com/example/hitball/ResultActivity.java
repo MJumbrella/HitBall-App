@@ -23,8 +23,9 @@ public class ResultActivity extends AppCompatActivity {
         }
         TextView win1 = (TextView) findViewById(R.id.winner1);//find the winner display window
         TextView win2 = (TextView) findViewById(R.id.winner2);
-        win1.setText(w1);//display the winners!
-        win2.setText(w2);
+        String team = "Player: "; // initialize the hp string
+        win1.setText(team + w1);//display the winners!
+        win2.setText(team + w2);
     }
 
     public void onBackClick(View view) {
