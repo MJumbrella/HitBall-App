@@ -2,7 +2,7 @@
     <string name="app_name">HitBall</string>
     <string name="intro"><b>INTRO: </b>This is a four-player game. You are asked to fill in your names at the beginning. Each player is positioned on a corner of the game board with the “hitball” positioned in the middle. Four players are divided into 2 teams, and you will form a team with the player who faces you diagonally.</string>
     <string name="goal"><b>GOAL: </b>The goal of this game is to hit the ball until it runs out of health OR attack your opponents until one of them runs out of health.</string>
-    <string name="actions"><b>ACTIONS: </b>While playing the game, you can execute four actions (shown as four buttons on the bottom):\n\n\t\t1) Hit the ball\n\t\t2) Attack your opponent on the right\n\t\t3) Attack your opponent on the left\n\t\t4) Heal your friend (you cannot heal yourself, unfortunately:(</string>
+    <string name="actions"><b>ACTIONS: </b>While playing the game, you can execute four actions (shown as four buttons on the bottom):\n\n\t\t1) Hit the ball（When you hit the ball, the ball will also attack you.\n\t\t2) Attack your opponent on the right\n\t\t3) Attack your opponent on the left\n\t\t4) Heal your friend (you cannot heal yourself, unfortunately:(</string>
     <string name="buff"><b>BUFF: </b>When a player’s health points is less than and equal to 2, the player could hit the ball with double the strength.</string>
     <string name="welcome_message"><b>Hi! Welcome to the Hitball tutorial!</b></string>
 </resources>
