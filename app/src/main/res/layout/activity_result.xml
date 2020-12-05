@@ -4,26 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backg"
     tools:context=".ResultActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="278dp"
+        android:layout_height="389dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="142dp"
+        android:contentDescription="@image of ball"
+        app:srcCompat="@drawable/ball" />
 
     <TextView
         android:id="@+id/result_win"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="-3dp"
+        android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:text="WIN"
-        android:textColor="@color/black"
+        android:textColor="@color/teal_700"
         android:textSize="77sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/result_win"
+        android:layout_centerInParent="true"
         android:layout_marginHorizontal="80dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/colorButtonDisable"
+        android:layout_marginTop="222dp"
+        android:background="@null"
         android:orientation="vertical"
         android:paddingHorizontal="30dp">
 
@@ -32,7 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
-            android:textColor="@color/black"
+            android:gravity="center"
+            android:textColor="@color/teal_700"
             android:textSize="22sp" />
 
         <TextView
@@ -40,7 +60,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
-            android:textColor="@color/black"
+            android:gravity="center"
+            android:textColor="@color/teal_700"
             android:textSize="22sp" />
 
     </LinearLayout>
@@ -50,13 +71,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/button_selector"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="48dp"
+        android:background="@null"
+        android:fontFamily="sans-serif-light"
+        android:onClick="onBackClick"
         android:paddingHorizontal="60dp"
         android:text="Back"
-        android:onClick="onBackClick"
-        android:textColor="@color/white" />
+        android:textColor="@color/teal_700"
+        android:textSize="30sp" />
 
 
 </RelativeLayout>
