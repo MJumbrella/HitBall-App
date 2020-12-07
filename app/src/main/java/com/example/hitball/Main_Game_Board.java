@@ -1,6 +1,7 @@
 package com.example.hitball;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -163,22 +164,43 @@ public class Main_Game_Board extends AppCompatActivity {
                 i = p1.gethp();
                 i = (100/5)* i;
                 pgsBar.setProgress(i);
+                p1hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p1.gethp()<=2){//activate the buff!
+                    p1hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
 
                 i2 = p2.gethp();
                 i2 = (100/5)* i2;
                 pgsBar2.setProgress(i2); //set the progress bar
+                p2hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p2.gethp()<=2){//activate the buff!
+                    p2hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
+
 
                 p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
                 i2 = p3.gethp();
                 i2 = (100/5)* i2;
                 pgsBar3.setProgress(i2); //set the progress bar
+                p3hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p3.gethp()<=2){//activate the buff!
+                    p3hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
                 i2 = p4.gethp();
                 i2 = (100/5)* i2;
                 pgsBar4.setProgress(i2); //set the progress bar
+                p4hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p4.gethp()<=2){//activate the buff!
+                    p4hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 balhp.setText(ballHp +Integer.toString(centerball.gethp()));
                 i2 = centerball.gethp();
@@ -294,22 +316,43 @@ public class Main_Game_Board extends AppCompatActivity {
                 i = p1.gethp();
                 i = (100/5)* i;
                 pgsBar.setProgress(i);
+                p1hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p1.gethp()<=2){//activate the buff!
+                    p1hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
 
                 i2 = p2.gethp();
                 i2 = (100/5)* i2;
                 pgsBar2.setProgress(i2); //set the progress bar
+                p2hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p2.gethp()<=2){//activate the buff!
+                    p2hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
+
 
                 p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
                 i2 = p3.gethp();
                 i2 = (100/5)* i2;
                 pgsBar3.setProgress(i2); //set the progress bar
+                p3hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p3.gethp()<=2){//activate the buff!
+                    p3hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
                 i2 = p4.gethp();
                 i2 = (100/5)* i2;
                 pgsBar4.setProgress(i2); //set the progress bar
+                p4hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p4.gethp()<=2){//activate the buff!
+                    p4hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 balhp.setText(ballHp +Integer.toString(centerball.gethp()));
                 i2 = centerball.gethp();
@@ -360,8 +403,10 @@ public class Main_Game_Board extends AppCompatActivity {
                 }// get this turn's player name and highlight// get this turn's player name
                 if (playername == Name1){ // attack the ball!
                     centerball.hurt();
+
                     if (p1.gethp()<=2){//activate the buff!
                         centerball.hurt();
+
                     }
                     p1.hurt();
                     p1p.setBackgroundResource(R.drawable.player1ani);
@@ -433,26 +478,46 @@ public class Main_Game_Board extends AppCompatActivity {
                         finish();//end
                     }
                 }
-                p1hp.setText(p1.getname()+hp+Integer.toString(p1.gethp())); //set healthpoints texts
+                p1hp.setText(p1.getname()+hp+Integer.toString(p1.gethp()));//set healthpoints texts
                 i = p1.gethp();
                 i = (100/5)* i;
                 pgsBar.setProgress(i);
+                p1hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p1.gethp()<=2){//activate the buff!
+                    p1hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
 
                 i2 = p2.gethp();
                 i2 = (100/5)* i2;
                 pgsBar2.setProgress(i2); //set the progress bar
+                p2hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p2.gethp()<=2){//activate the buff!
+                    p2hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
                 i2 = p3.gethp();
                 i2 = (100/5)* i2;
                 pgsBar3.setProgress(i2); //set the progress bar
+                p3hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p3.gethp()<=2){//activate the buff!
+                    p3hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
                 i2 = p4.gethp();
                 i2 = (100/5)* i2;
                 pgsBar4.setProgress(i2); //set the progress bar
+                p4hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p4.gethp()<=2){//activate the buff!
+                    p4hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 balhp.setText(ballHp +Integer.toString(centerball.gethp()));
                 i2 = centerball.gethp();
@@ -508,22 +573,43 @@ public class Main_Game_Board extends AppCompatActivity {
                 i = p1.gethp();
                 i = (100/5)* i;
                 pgsBar.setProgress(i);
+                p1hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p1.gethp()<=2){//activate the buff!
+                    p1hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p2hp.setText(p2.getname()+hp+Integer.toString(p2.gethp()));
 
                 i2 = p2.gethp();
                 i2 = (100/5)* i2;
                 pgsBar2.setProgress(i2); //set the progress bar
+                p2hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p2.gethp()<=2){//activate the buff!
+                    p2hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
+
 
                 p3hp.setText(p3.getname()+hp+Integer.toString(p3.gethp()));
                 i2 = p3.gethp();
                 i2 = (100/5)* i2;
                 pgsBar3.setProgress(i2); //set the progress bar
+                p3hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p3.gethp()<=2){//activate the buff!
+                    p3hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 p4hp.setText(p4.getname()+hp+Integer.toString(p4.gethp()));
                 i2 = p4.gethp();
                 i2 = (100/5)* i2;
                 pgsBar4.setProgress(i2); //set the progress bar
+                p4hp.setTextColor(Color.parseColor("#FFFFFF"));
+                if (p4.gethp()<=2){//activate the buff!
+                    p4hp.setTextColor(Color.parseColor("#FF0000"));
+
+                }
 
                 balhp.setText(ballHp +Integer.toString(centerball.gethp()));
                 i2 = centerball.gethp();
