@@ -28,6 +28,8 @@ public class HomeActivity extends AppCompatActivity {
        to_tutorial.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+
+               player.pause();
                opentutorial();
            }
        });
